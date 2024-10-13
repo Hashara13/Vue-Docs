@@ -1,7 +1,12 @@
 <script setup>
 import {ref} from 'vue'
-const message=ref('Dynamic Binding')
+const message=ref('title')
 </script>
 <template>
-  <h1>{{ message }}</h1>
+  <h1 :class="message">Attribute Bindings </h1>
 </template>
+<style>
+.title{
+  color: aquamarine;
+}
+</style>
