@@ -1,22 +1,15 @@
-<!-- <script setup>
-import {ref} from 'vue'
-const text=ref('')
-function Ontype(e){
-  text.value=e.target.value
+<script setup>
+import { ref } from 'vue'
+
+const awesome = ref(true)
+
+function toggle() {
+  awesome.value=!awesome.value
 }
 </script>
-<template>
-  <input :value="text" @input="Ontype"  type="text">
-  <h1>{{ text }}</h1>
-</template> -->
 
-<script setup>
-import {ref} from 'vue'
-const text=ref('')
-
-</script>
 <template>
-  <input v-model="text" type="text">
-  <h1>{{ text }}</h1>
+  <button @click="toggle">Toggle</button>
+  <h1 v-if="awesome">Vue is awesome!</h1>
+  <h1 v-else>Oh no 😢</h1>
 </template>
-
