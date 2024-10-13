@@ -1,12 +1,10 @@
 <script setup>
 import {ref} from 'vue'
-const message=ref('title')
+const count=ref(0)
+function increment(){
+  count.value++
+}
 </script>
 <template>
-  <h1 :class="message">Attribute Bindings </h1>
+  <h1 @click="increment">Count is : {{ count }} </h1>
 </template>
-<style>
-.title{
-  color: aquamarine;
-}
-</style>
