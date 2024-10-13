@@ -1,10 +1,11 @@
 <script setup>
 import {ref} from 'vue'
-const count=ref(0)
-function increment(){
-  count.value++
+const text=ref('')
+function Ontype(e){
+  text.value=e.target.value
 }
 </script>
 <template>
-  <h1 @click="increment">Count is : {{ count }} </h1>
+  <input :value="text" @input="Ontype"  type="text">
+  <h1>{{ text }}</h1>
 </template>
