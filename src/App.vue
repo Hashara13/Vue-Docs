@@ -8,3 +8,4 @@ const msg = ref('from parent')
 <template>
   <ChildComp>Message: {{ msg }}</ChildComp>
 </template>
+
